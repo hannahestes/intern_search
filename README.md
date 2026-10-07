@@ -5,8 +5,9 @@ A GitHub Pages site that tracks research internships in **human-centered softwar
 
 ## How it works
 
-- `data/positions.json`: one entry per position. The site renders entirely from this file.
+- `data/positions.json`: open postings only, each linking directly to its application page.
 - `data/updates.json`: refresh history. It feeds the "What's new" banner and the history list.
+- `data/watchlist.json`: companies that fit but have no matching posting yet.
 - `index.html` + `assets/`: a static page with no build step.
 - `.claude/skills/refresh-internships/`: a Claude skill that re-checks every link, finds new postings,
   updates both data files, and commits.

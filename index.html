@@ -4,51 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Summer 2027 Internships</title>
-  <meta name="description" content="Research internships in human-centered software engineering and developer experience for Summer 2027.">
+  <meta name="description" content="Open Summer 2027 research internships in human-centered software engineering and developer experience.">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="wrap">
-    <p class="eyebrow">Summer 2027 · Research internship search</p>
-    <h1>Human-centered SE &amp; developer experience internships</h1>
-    <p class="lede">Research internships at labs that publish at ICSE, FSE, VL/HCC, CHI, CSCW, and UIST. A Claude agent refreshes this list regularly.</p>
+    <h1>Summer 2027 research internships</h1>
+    <p class="lede">Human-centered software engineering and developer experience, at labs that publish at ICSE, FSE, VL/HCC, CHI, CSCW, and UIST. Every Apply button goes straight to the job posting.</p>
     <p class="refreshed" id="refreshed"></p>
   </header>
 
   <main class="wrap">
     <section class="stats" id="stats" aria-label="Summary"></section>
-
-    <section class="whatsnew" id="whatsnew" aria-label="What's new"></section>
+    <section class="whatsnew" id="whatsnew" aria-label="What's new" hidden></section>
 
     <section class="controls" aria-label="Filters">
-      <input id="q" type="search" placeholder="Search company, team, notes…" aria-label="Search">
-      <select id="status" aria-label="Filter by status"><option value="">All statuses</option></select>
+      <input id="q" type="search" placeholder="Search company, role, notes…" aria-label="Search">
       <select id="focus" aria-label="Filter by focus"><option value="">All focus areas</option></select>
       <select id="sort" aria-label="Sort">
-        <option value="priority">Sort: open first</option>
         <option value="deadline">Sort: deadline</option>
         <option value="company">Sort: company</option>
-        <option value="added">Sort: recently added</option>
+        <option value="added">Sort: newest</option>
       </select>
     </section>
 
     <section id="list" class="list" aria-live="polite"></section>
 
-    <section class="resources">
-      <h2>Other places to look</h2>
-      <ul>
-        <li><a href="https://github.com/SimplifyJobs/Summer2027-Internships">SimplifyJobs Summer 2027 list</a>: broad list, updated daily</li>
-        <li><a href="https://dion-jy.github.io/phd-intern-board/">PhD Intern Board</a>: research and student-researcher roles</li>
-        <li><a href="https://www.microsoft.com/en-us/research/careers/open-positions/">Microsoft Research open positions</a></li>
-        <li><a href="https://internship.jetbrains.com/">JetBrains internship projects</a></li>
-        <li>Recent ICSE, FSE, CHI, and VL/HCC papers with industry authors: email those researchers directly</li>
+    <section class="block" aria-labelledby="watch-h">
+      <h2 id="watch-h">Watch list</h2>
+      <p class="hint">These companies are good fits but haven't posted a matching Summer 2027 role yet. The refresh checks them each time it runs.</p>
+      <ul class="watch" id="watch"></ul>
+    </section>
+
+    <section class="block" aria-labelledby="more-h">
+      <h2 id="more-h">Other places to look</h2>
+      <ul class="resources">
+        <li><a href="https://github.com/SimplifyJobs/Summer2027-Internships">SimplifyJobs Summer 2027 list</a></li>
+        <li><a href="https://dion-jy.github.io/phd-intern-board/">PhD Intern Board</a></li>
+        <li>Industry authors of recent ICSE, FSE, CHI, and VL/HCC papers: email them directly</li>
       </ul>
     </section>
 
-    <section class="log" id="log" aria-label="Refresh history"></section>
+    <section class="block" id="history" aria-labelledby="log-h" hidden>
+      <h2 id="log-h">Refresh history</h2>
+      <ol class="log" id="log"></ol>
+    </section>
   </main>
 
-  <footer class="wrap">Data lives in <code>data/positions.json</code> and is refreshed by the <code>refresh-internships</code> Claude skill.</footer>
+  <footer class="wrap">Refreshed automatically by a Claude agent using the <code>refresh-internships</code> skill.</footer>
   <script src="assets/app.js"></script>
 </body>
 </html>
