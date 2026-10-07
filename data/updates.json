@@ -3,14 +3,6 @@
   "log": [
     {
       "date": "2026-10-07",
-      "summary": "No changes. Job boards (Google, Microsoft, Workday, Amazon) were blocked by the network proxy in this run, so no postings could be re-verified and no new ones were found.",
-      "changes": [
-        "No changes",
-        "Not re-checked: all 6 open postings and 6 watch-list companies (lastChecked left unchanged)"
-      ]
-    },
-    {
-      "date": "2026-10-07",
       "summary": "6 open Summer 2027 postings, all linked directly to the application. Microsoft Research, Meta, JetBrains, GitHub, IBM, and AWS haven't posted fitting roles yet; they're on the watch list.",
       "changes": [
         "Added 6 open postings",

@@ -23,6 +23,11 @@ A company that fits but has no matching posting yet belongs in `data/watchlist.j
 
 ## Steps
 
+0. **Check that the job boards are reachable.** Fetch one existing `applyUrl` (for example the first Google posting).
+   If it is blocked (a 403 / CONNECT tunnel failure from curl, or EGRESS_BLOCKED from WebFetch), **stop**.
+   Don't edit any files, don't commit, and don't push. Report which domains were blocked, so the site isn't updated
+   from a run that couldn't check anything.
+
 1. **Read all three data files.**
 
 2. **Re-check every position.** Load its `applyUrl`.
